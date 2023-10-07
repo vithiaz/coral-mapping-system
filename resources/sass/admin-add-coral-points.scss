@@ -1,0 +1,152 @@
+@import  '_var.scss';
+
+.add-coral-points-page {
+    padding: 20px 0 0 0;
+
+    section.add-coordinates {
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .section-title-wrapper {
+                
+                h1 {
+                    font-size: 1.2rem;
+
+                    i {
+                        color: $DarkOceanGreen;
+                    }
+                }
+            }
+
+            .section-body-wrapper {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: stretch;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .form-container {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 40px;
+                    
+                    .details-input-wrapper, .coordinates-input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        .range-input {
+                            display: flex;
+                            flex-direction: column;
+
+                            .label-wrapper {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                                column-gap: 20px;                                
+                            }
+                        }
+
+
+                        .button-wrapper {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-start;
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+                
+                .map-item-wrapper {
+                    flex-basis: 512px;
+                    flex-grow: 1;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    
+                    .map-container {
+                        height: 512px;
+                        width: 100%;
+                        overflow: hidden;
+                        border-radius: 4px;
+
+                        .map-canvas {
+                            width: 100%;
+                            height: 100%;
+                            background-color: $SecondaryWhite;
+                        }
+                    }
+
+                    .option-container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+                    
+                }
+            }
+            
+
+        }
+    }
+
+    section.listed-coordinates {
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        background-color: $SecondaryWhite;
+        margin-top: 20px;
+        padding: 20px 0;
+
+
+        .container {
+            
+            .section-title-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                justify-content: space-between;
+                row-gap: 10px;
+                column-gap: 20px;
+                
+                h1 {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+
+                .button-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    .reset-button {
+                        @include button-default-ic($bg: $PrimaryDark, $color: white, $bg_hover: $PrimaryRed, $color_hover: white)
+                    }
+                }
+            }
+
+            .section-body-wrapper {
+
+                table {
+
+                    .table-btn {
+                        @include button-default-ic($bg: $PrimaryDark, $color: white, $bg_hover: $PrimaryRed, $color_hover: white);
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}
+

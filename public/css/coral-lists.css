@@ -1,0 +1,352 @@
+.add-coral-points-page {
+  padding: 20px 0 0 0;
+}
+.add-coral-points-page section.coordinate-list {
+  padding-bottom: 20px;
+}
+.add-coral-points-page section.coordinate-list .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.add-coral-points-page section.coordinate-list .container .section-title-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-coral-points-page section.coordinate-list .container .section-title-wrapper h1 {
+  font-size: 1.2rem;
+}
+.add-coral-points-page section.coordinate-list .container .section-title-wrapper h1 i {
+  color: #4CA1AF;
+}
+.add-coral-points-page section.coordinate-list .container .section-title-wrapper .button-wrapper .add-button {
+  background-color: #6DD5FA;
+  font-weight: 600;
+  color: #2A3034;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.add-coral-points-page section.coordinate-list .container .section-title-wrapper .button-wrapper .add-button:hover {
+  background-color: #74EBD5;
+  color: black;
+}
+.add-coral-points-page section.coordinate-list .container .section-title-wrapper .button-wrapper .add-button.ico span {
+  margin-left: 8px;
+}
+.add-coral-points-page section.coordinate-list .container .section-title-wrapper .button-wrapper .add-button.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+.add-coral-points-page section.coordinate-list .container .section-title-wrapper .button-wrapper .add-button.hovered:hover span {
+  max-width: 200vw;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container {
+  height: auto;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 5px;
+  padding: 5px 0;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper .condition-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 5px;
+  padding-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #CCCCCC;
+  cursor: pointer;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper .condition-card.active {
+  background-color: #6DD5FA;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper .condition-card:hover {
+  background-color: #1B75BC;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper .condition-card .status-wrapper {
+  display: grid;
+  place-items: center;
+  padding: 0 8px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper .condition-card .status-wrapper .status-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #eaf3f6;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper .condition-card .status-wrapper .status-circle.good {
+  background-color: #74EBD5;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper .condition-card .status-container {
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .condition-wrapper .condition-card-wrapper .condition-card .status-container .status {
+  font-weight: 600;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  min-height: 512px;
+  height: 90vh;
+  overflow-y: auto;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 5px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #CCCCCC;
+  margin-right: 5px !important;
+  transition: margin 0.3s ease-in-out;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card:hover {
+  cursor: pointer;
+  background-color: #F6F6F6;
+  margin: 10px 0;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .status-wrapper {
+  display: grid;
+  place-items: center;
+  padding: 0 8px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .status-wrapper .status-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #eaf3f6;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .status-wrapper .status-circle.good {
+  background-color: #74EBD5;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .loc-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 160px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .loc-wrapper span {
+  font-size: 0.9rem;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .icon-wrapper .delete-button {
+  background-color: transparent;
+  font-weight: 600;
+  color: #CCCCCC;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .icon-wrapper .delete-button:hover {
+  background-color: transparent;
+  color: #FF1616;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .icon-wrapper .delete-button.ico span {
+  margin-left: 8px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .icon-wrapper .delete-button.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card .icon-wrapper .delete-button.hovered:hover span {
+  max-width: 200vw;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card.active {
+  background-color: #CCCCCC;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card.active .delete-button {
+  background-color: transparent;
+  font-weight: 600;
+  color: #2A3034;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card.active .delete-button:hover {
+  background-color: transparent;
+  color: #FF1616;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card.active .delete-button.ico span {
+  margin-left: 8px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card.active .delete-button.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .location-card.active .delete-button.hovered:hover span {
+  max-width: 200vw;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .empty-state {
+  padding: 40px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .card-item-container .location-card-wrapper .empty-state i {
+  color: #74EBD5;
+  font-size: 1.8rem;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .map-item-wrapper {
+  flex-basis: 512px;
+  flex-grow: 1;
+  min-height: 512px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .map-item-wrapper .map-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .map-item-wrapper .map-container .map-canvas {
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+}
+.add-coral-points-page section.coordinate-list .container .section-body-wrapper .map-item-wrapper .option-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.add-coral-points-page section.listed-coordinates {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  background-color: #F6F6F6;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  row-gap: 10px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button {
+  background-color: #2A3034;
+  font-weight: 600;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button:hover {
+  background-color: #FF1616;
+  color: white;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button.ico span {
+  margin-left: 8px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button.hovered:hover span {
+  max-width: 200vw;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn {
+  background-color: #2A3034;
+  font-weight: 600;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn:hover {
+  background-color: #FF1616;
+  color: white;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn.ico span {
+  margin-left: 8px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn.hovered:hover span {
+  max-width: 200vw;
+}/*# sourceMappingURL=coral-lists.css.map */

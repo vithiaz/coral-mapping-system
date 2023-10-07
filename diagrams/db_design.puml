@@ -1,0 +1,42 @@
+@startuml
+
+entity corals {
+    * id INT PRIMARYKEY,
+    --
+    * STRING condition
+        ' baik
+        ' rusak
+    * DOUBLE long
+    * DOUBLE lat
+    * INT radius
+    --
+    * DATE created_at
+    * DATE updated_at
+}
+
+entity sea_waves {
+    * id INT PRIMARYKEY,
+    --
+    * DOUBLE wave_speed DEFAULT(1)
+    --
+    * DATE created_at
+    * DATE updated_at
+}
+
+entity sea_waves_coordinates {
+    * id INT PRIMARYKEY,
+    --
+    * id wave_id FOUREIGN(sea_waves.id)
+    --
+    * DOUBLE long
+    * DOUBLE lat
+    --
+    * DATE created_at
+    * DATE updated_at
+}
+
+
+sea_waves ||--|{ sea_waves_coordinates
+
+
+@enduml

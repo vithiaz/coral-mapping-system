@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main-navbar {
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.19);
+}
+#main-navbar .container {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap-reverse;
+}
+#main-navbar .container .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-grow: 4;
+  flex-wrap: wrap;
+}
+#main-navbar .container .content-wrapper .logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+#main-navbar .container .content-wrapper .logo-wrapper:hover {
+  cursor: pointer;
+}
+#main-navbar .container .content-wrapper .logo-wrapper .logo-container {
+  width: 70px;
+  height: 70px;
+}
+#main-navbar .container .content-wrapper .logo-wrapper .logo-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main-navbar .container .content-wrapper .logo-wrapper .logo-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#main-navbar .container .content-wrapper .logo-wrapper .logo-title-wrapper .logo-subtitle {
+  color: black;
+}
+#main-navbar .container .content-wrapper .logo-wrapper .logo-title-wrapper .logo-title {
+  letter-spacing: 3px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+#main-navbar .container .content-wrapper .menu-wrapper {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-grow: 1;
+  margin: 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li.button-li {
+  margin-left: 20px;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li.button-li button {
+  padding: 10px 20px;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li.button-li button.logout {
+  background-color: #74EBD5;
+  font-weight: 600;
+  color: black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li.button-li button.logout:hover {
+  background-color: #FF1616;
+  color: white;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li.button-li button.logout.ico span {
+  margin-left: 8px;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li.button-li button.logout.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li.button-li button.logout.hovered:hover span {
+  max-width: 200vw;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li a {
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+#main-navbar .container .content-wrapper .menu-wrapper li a:hover {
+  cursor: pointer;
+  color: #1B75BC;
+  font-weight: 600;
+}
+#main-navbar .container .description-box-shadow {
+  background-color: red;
+  flex-grow: 1;
+  flex-basis: 300px;
+  position: relative;
+}
+#main-navbar .container .description-box-shadow .description-box {
+  min-width: 200px;
+  max-width: 600px;
+  min-height: 220px;
+  background-color: rgba(27, 118, 188, 0.831372549);
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+#main-navbar .container .description-box-shadow .description-box p {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+}
+
+#login-sidenav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 109;
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  transition: all linear 0.1s;
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+  background-color: rgba(0, 0, 0, 0);
+}
+#login-sidenav * {
+  opacity: 0;
+}
+#login-sidenav.show {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#login-sidenav.show .overlay {
+  max-width: 100vw;
+}
+#login-sidenav.show .background {
+  max-width: 100%;
+}
+#login-sidenav.show * {
+  opacity: 1;
+}
+#login-sidenav .overlay {
+  height: 100%;
+  flex-grow: 1;
+  width: 500px;
+  max-width: 0vw;
+  flex-shrink: 1;
+  cursor: pointer;
+}
+#login-sidenav .background {
+  padding: 20px;
+  height: 100%;
+  background-color: white;
+  max-width: 0%;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.1s linear 0.3s;
+  width: 450px;
+}
+#login-sidenav .background .body {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 1;
+}
+#login-sidenav .background .body .login-head-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 10px;
+  flex-wrap: wrap-reverse;
+}
+#login-sidenav .background .body .login-head-wrapper .logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+#login-sidenav .background .body .login-head-wrapper .logo-wrapper:hover {
+  cursor: pointer;
+}
+#login-sidenav .background .body .login-head-wrapper .logo-wrapper .logo-container {
+  width: 40px;
+  height: 40px;
+}
+#login-sidenav .background .body .login-head-wrapper .logo-wrapper .logo-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#login-sidenav .background .body .login-head-wrapper .logo-wrapper .logo-title {
+  letter-spacing: 3px;
+  font-size: 1.1rem;
+}
+#login-sidenav .background .body .login-head-wrapper .logo-wrapper .logo-title .title-bold {
+  font-weight: 600;
+}
+#login-sidenav .background .body .login-form-wrapper {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#login-sidenav .background .body .login-form-wrapper .form-title {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+#login-sidenav .background .body .login-form-wrapper .error {
+  color: #FF1616;
+}
+#login-sidenav .background .body .login-form-wrapper .login-form .form-floating {
+  width: 100%;
+}
+#login-sidenav .background .body .login-form-wrapper .login-form .error-wrapper .error {
+  margin-bottom: 5px;
+}
+#login-sidenav .background .body .login-form-wrapper .login-form .button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 25px;
+}
+#login-sidenav .background .body .login-form-wrapper .login-form .button-wrapper .register-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+#login-sidenav .background .body .login-form-wrapper .login-form .button-wrapper .register-wrapper span {
+  font-size: 1rem;
+  flex-shrink: 1;
+  white-space: break-spaces;
+}
+#login-sidenav .background .body .login-form-wrapper .login-form .button-wrapper .register-wrapper span a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+#login-sidenav .background .body .login-form-wrapper .login-form .button-wrapper .register-wrapper span a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#session-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  max-width: 220px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  transform: translateX(100vw);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+#session-message.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+#session-message.success .content i.success {
+  display: block;
+}
+#session-message.danger .content i.danger {
+  display: block;
+}
+#session-message.info .content i.info {
+  display: block;
+}
+#session-message .close-button {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+#session-message .close-button:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+}
+#session-message .content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+#session-message .content i {
+  font-size: 1.5rem;
+  display: none;
+}
+#session-message .content i.success {
+  color: #09DA96;
+}
+#session-message .content i.danger {
+  color: #FF1616;
+}
+#session-message .content i.info {
+  color: #1B75BC;
+}
+#session-message .content .message {
+  flex-grow: 1;
+  font-weight: 600;
+}
+
+.button-default {
+  background-color: #6DD5FA;
+  font-weight: 600;
+  color: black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: none;
+  border: none;
+  padding: 5px 20px;
+  transition: all ease-in-out 0.2s;
+}
+.button-default:hover {
+  background-color: #09DA96;
+  color: #1B75BC;
+}
+.button-default.ico span {
+  margin-left: 8px;
+}
+.button-default.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+.button-default.hovered:hover span {
+  max-width: 200vw;
+}/*# sourceMappingURL=app.css.map */

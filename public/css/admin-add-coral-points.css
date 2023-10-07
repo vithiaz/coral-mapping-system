@@ -1,0 +1,162 @@
+.add-coral-points-page {
+  padding: 20px 0 0 0;
+}
+.add-coral-points-page section.add-coordinates .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.add-coral-points-page section.add-coordinates .container .section-title-wrapper h1 {
+  font-size: 1.2rem;
+}
+.add-coral-points-page section.add-coordinates .container .section-title-wrapper h1 i {
+  color: #4CA1AF;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container .details-input-wrapper, .add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container .coordinates-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container .details-input-wrapper .range-input, .add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container .coordinates-input-wrapper .range-input {
+  display: flex;
+  flex-direction: column;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container .details-input-wrapper .range-input .label-wrapper, .add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container .coordinates-input-wrapper .range-input .label-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container .details-input-wrapper .button-wrapper, .add-coral-points-page section.add-coordinates .container .section-body-wrapper .form-container .coordinates-input-wrapper .button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .map-item-wrapper {
+  flex-basis: 512px;
+  flex-grow: 1;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .map-item-wrapper .map-container {
+  height: 512px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .map-item-wrapper .map-container .map-canvas {
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+}
+.add-coral-points-page section.add-coordinates .container .section-body-wrapper .map-item-wrapper .option-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.add-coral-points-page section.listed-coordinates {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  background-color: #F6F6F6;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  row-gap: 10px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button {
+  background-color: #2A3034;
+  font-weight: 600;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button:hover {
+  background-color: #FF1616;
+  color: white;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button.ico span {
+  margin-left: 8px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-title-wrapper .button-wrapper .reset-button.hovered:hover span {
+  max-width: 200vw;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn {
+  background-color: #2A3034;
+  font-weight: 600;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn:hover {
+  background-color: #FF1616;
+  color: white;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn.ico span {
+  margin-left: 8px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn.hovered span {
+  display: flex;
+  max-width: 0vw;
+  overflow: hidden;
+  transition: max-width ease-in-out 0.5s;
+  white-space: nowrap;
+  margin: 0;
+  text-indent: 10px;
+}
+.add-coral-points-page section.listed-coordinates .container .section-body-wrapper table .table-btn.hovered:hover span {
+  max-width: 200vw;
+}/*# sourceMappingURL=admin-add-coral-points.css.map */

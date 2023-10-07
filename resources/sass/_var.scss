@@ -1,0 +1,71 @@
+$PrimaryRed: #FF1616;       //rgb(255, 22, 22)
+$PrimaryBlue: #1B75BC;      //rgb(27, 117, 188)
+$PrimaryBlue75: #1b76bcd4;  //rgb()
+$PrimaryGreen: #09DA96;     //rgb(9, 218, 150)
+$PrimaryDark: #2A3034;      //rgb()
+
+$OceanBlue: #6DD5FA;        //rgb()
+$OceanBlueVeryLight: #eaf3f6;
+$OceanGreen: #74EBD5;       //rgb()
+$DarkOceanBlue: #2C3E50;    //rgb()
+$DarkOceanGreen: #4CA1AF;   //rgb()
+
+
+$BorderLight: #CCCCCC;
+$TextLighter: #5F5F5F;
+$SecondaryWhite: #F6F6F6;
+
+$BoxShadow: 0px 3px 6px rgba(0,0,0,0.2);
+
+
+@mixin section-title() {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+@mixin button-default-ic($bg: black, $color: white, $bg_hover: white, $color_hover: black) {
+    background-color: $bg;
+    font-weight: 600;
+    color: $color;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &:hover {
+        background-color: $bg_hover;
+        color: $color_hover;
+    }
+    
+    &.ico {
+
+        span {
+            margin-left: 8px;
+        }
+    }
+
+
+    &.hovered {
+        
+        span {
+            display: flex;
+            max-width: 0vw;
+            overflow: hidden;
+            transition: max-width ease-in-out 0.5s;
+            white-space: nowrap;
+            margin: 0;
+            text-indent: 10px;
+        }
+
+        &:hover {
+            
+            span {
+                max-width: 200vw;
+            }
+        }
+    }
+
+}

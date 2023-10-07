@@ -217,13 +217,14 @@
             getPosition: d => d.position,
             getFillColor: d => d.color,
             getRadius: d => d.radius,
-            opacity: 0.2,
+            opacity: 0.8,
         })
         deckOverlay.setProps({
             layers: [
                 db_scatterLayer,
             ],
         });
+
         deckOverlay.setMap(map);
 
         $( window ).on('add-map-marker', function (e) {

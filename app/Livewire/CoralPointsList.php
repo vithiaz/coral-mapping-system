@@ -108,4 +108,8 @@ class CoralPointsList extends Component
         $this->dispatch('reset-heatmap');
     }
 
+    public function send_data() {
+        $this->dispatch('add-map-marker', cordData: [], storedCordData: $this->storedCorals);
+    }
+
 }

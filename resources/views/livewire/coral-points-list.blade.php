@@ -86,6 +86,7 @@
                             </label>
                             <input class="form-check-input" type="checkbox" checked id="heatmap-togler">
                         </div>
+                        <button wire:click='send_data' class="btn default-button">Test</button>
                     </div>
                 </div>
             </div>
@@ -221,7 +222,7 @@
         })
         deckOverlay.setProps({
             layers: [
-                db_scatterLayer,
+                // db_scatterLayer,
             ],
         });
 
@@ -259,14 +260,13 @@
 
             deckOverlay.setProps({
                 layers: [
-                    // db_scatterLayer,
+                    db_scatterLayer,
                     storedScatterLayerMarker,
                     currentScatterLayerMarker,
                 ],
             });
             deckOverlay.setMap(map);
         })
-
     }
     window.initMap = initMap;
 

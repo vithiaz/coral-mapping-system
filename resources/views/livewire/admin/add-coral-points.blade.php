@@ -148,11 +148,11 @@
 
     let map, heatmapGreenLayer
     function initMap() {                
-        // const centerLatLong = { lat: 1.794427, lng: 125.146919 };
-        const centerLatLong = { lat: 1.8065609052563818, lng: 125.11308183829424 };
+        const centerLatLong = { lat: 1.794427, lng: 125.146919 };
+        // const centerLatLong = { lat: 1.8065609052563818, lng: 125.11308183829424 };
 
         map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 15,
+            zoom: 13,
             center: centerLatLong,
             mapTypeId: 'satellite',
         });
